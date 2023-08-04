@@ -3,7 +3,7 @@ import "./Main.scss";
 import MainGraph from "../MainGraph/MainGraph";
 import MainTitle from "../MainTitle/MainTitle";
 
-const Main = () => {
+const Main = ({ stockData, cryptoData  }) => {
   return (
     <>
       <div className="Main">

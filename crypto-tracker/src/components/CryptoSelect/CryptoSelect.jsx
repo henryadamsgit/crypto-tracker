@@ -1,8 +1,8 @@
 import React from "react";
 import "./CryptoSelect.scss";
 
-const TopSelect = () => {
+const CryptoSelect = () => {
   return <div className="CryptoSelect">Crypto</div>;
 };
 
-export default TopSelect;
+export default CryptoSelect;

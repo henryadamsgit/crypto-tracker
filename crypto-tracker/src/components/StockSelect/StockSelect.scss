@@ -1,14 +1,15 @@
 .StockSelect {
   width: 48.4%;
-  background-color: rgb(92, 43, 226);
-  color: white;
+  background-color: white;
+  color: rgb(92, 43, 226);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 4.8%;
+  height: 5%;
+  padding: 0 20px;
+  border: solid 2px rgb(92, 43, 226);
   position: fixed;
-  border: 2px solid white;
   z-index: 2;
   top: 10%;
-  right: 0px;
+  left: 0px;
 }

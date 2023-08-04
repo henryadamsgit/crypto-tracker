@@ -1,8 +1,8 @@
 import React from "react";
 import "./StockSelect.scss";
 
-const TopSelect = () => {
-  return <div className="StockSelect">Stock</div>;
+const StockSelect = () => {
+  return <div className="StockSelect">Stocks</div>;
 };
 
-export default TopSelect;
+export default StockSelect;

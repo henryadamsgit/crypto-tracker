@@ -7,8 +7,8 @@ const TopNav = () => {
   return (
     <div className="topNav">
       <h3 className="title">Crypto & Stock Tracker</h3>
-      <CryptoSelect />
       <StockSelect />
+      <CryptoSelect />
     </div>
   );
 };
