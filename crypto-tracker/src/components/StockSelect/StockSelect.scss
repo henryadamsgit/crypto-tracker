@@ -1,4 +1,4 @@
-.StockSelect {
+.stockSelect {
   width: 48.4%;
   background-color: white;
   color: rgb(92, 43, 226);
@@ -12,4 +12,9 @@
   z-index: 2;
   top: 10%;
   left: 0px;
+}
+
+.stockSelect__title a {
+  text-decoration: none; 
+  color: rgb(92, 43, 226);
 }

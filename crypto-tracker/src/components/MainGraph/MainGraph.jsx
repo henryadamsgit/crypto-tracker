@@ -1,7 +1,7 @@
 import React from "react";
 import "./MainGraph.scss";
 
-const MainGraph = () => {
+const MainGraph = ({ stockData, cryptoData }) => {
   return (
     <>
       <div className="graph">

@@ -3,12 +3,20 @@ import "./Main.scss";
 import MainGraph from "../MainGraph/MainGraph";
 import MainTitle from "../MainTitle/MainTitle";
 
-const Main = ({ stockData, cryptoData  }) => {
+const Main = ({ stockData, cryptoData, selectedData }) => {
   return (
     <>
       <div className="Main">
-        <MainTitle />
-        <MainGraph />
+        <MainTitle
+          stockData={stockData}
+          cryptoData={cryptoData}
+          selectedData={selectedData}
+        />
+        <MainGraph
+          stockData={stockData}
+          cryptoData={cryptoData}
+          selectedData={selectedData}
+        />
       </div>
     </>
   );

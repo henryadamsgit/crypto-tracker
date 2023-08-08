@@ -1,12 +1,19 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Ticker.scss";
 import TickerButton from "../TickerButton/TickerButton";
 
-const Ticker = ({ cryptoData }) => {
+const Ticker = ({
+  dataType,
+  cryptoData,
+  stockData,
+  handleTickerButtonClick,
+}) => {
   const TICKER_ITEM_WIDTH = 180;
   const TICKER_SCROLL_DELAY = 3000; // 3 seconds
 
   const tickerRef = useRef(null);
+
+  const data = dataType === "crypto" ? cryptoData : stockData;
 
   useEffect(() => {
     const ticker = tickerRef.current;
@@ -34,21 +41,24 @@ const Ticker = ({ cryptoData }) => {
 
     startScrolling();
 
-    return () => {
-      // No need to clear anything for requestAnimationFrame
-    };
+    return () => {};
   }, []);
 
   return (
     <div className="ticker">
       <div className="ticker__carousel" ref={tickerRef}>
-        {cryptoData && cryptoData.length > 0 ? (
-          cryptoData.map((crypto, index) => (
+        {data && data.length > 0 ? (
+          data.map((item, index) => (
             <TickerButton
-              key={crypto.asset_id}
-              title={crypto.name}
-              data={parseFloat(crypto.price_usd).toFixed(4)}
+              key={dataType === "crypto" ? item.asset_id : item.symbol}
+              title={item.name}
+              data={
+                dataType === "crypto"
+                  ? parseFloat(item.price_usd).toFixed(4)
+                  : item.price
+              }
               colorIndex={index}
+              onClick={() => handleTickerButtonClick(item)}
             />
           ))
         ) : (

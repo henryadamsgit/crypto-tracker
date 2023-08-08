@@ -1,4 +1,4 @@
-.CryptoSelect {
+.cryptoSelect {
   width: 48.4%;
   background-color: rgb(92, 43, 226);
   color: white;
@@ -11,4 +11,9 @@
   z-index: 2;
   top: 10%;
   right: 0px;
+
+  .cryptoSelect__title a {
+    text-decoration: none;
+    color: white;
+  }
 }
